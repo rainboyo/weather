@@ -1,0 +1,135 @@
+
+body {
+    background-color: #f9e0c1;
+}
+.login_bg_l {
+    float: left;
+    width: 850px;
+    height: 768px;
+    background: url("../imgs/login_bg.png");
+}
+.login_bg_r {
+    float: left;
+    width: 516px;
+    height: 768px;
+    background-color: #28223c;
+}
+.login {
+    position: absolute;
+    width: 490px;
+    height: 570px;
+    top: 60px;
+    left: 680px;
+    background-color: #fff;
+}
+.login_text {
+    position: absolute;
+    top: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    color: #9a6263;
+}
+.username{
+    position: absolute;
+    top: 166px;
+    left: 60px;
+    width: 370px;
+    height: 50px;
+    border: 2px solid #e5e5e5;
+    border-radius: 25px;
+}
+.icon-denglu {
+    float: left;
+    display: inline-block;
+    font-size: 32px;
+    margin: 0px 20px;
+}
+.username input {
+    float: left;
+    height: 100%;
+    width: 270px;
+    font-size: 22px;
+    
+}
+
+.password{
+    position: absolute;
+    top: 245px;
+    left: 60px;
+    width: 370px;
+    height: 50px;
+    border: 2px solid #e5e5e5;
+    border-radius: 25px;
+}
+.icon-denglumima {
+    float: left;
+    display: inline-block;
+    font-size: 32px;
+    margin: 0px 20px;
+}
+.password input {
+    float: left;
+    height: 100%;
+    width: 270px;
+    font-size: 22px;
+    
+}
+.login_btn {
+    position: absolute;
+    top: 375px;
+    left: 126px;
+    width: 235px;
+    height: 66px;
+    background-color: #77476e;
+    border: 1px solid #ccc;
+    border-radius: 33px;
+    text-align: center;
+    line-height: 66px;
+    font-size: 24px;
+    color: #fff;
+    z-index: 999;
+}
+.login_btn:hover {
+    cursor: pointer;
+}
+.vline {
+    position: absolute;
+    top: 412px;
+    left: 0px;
+    width: 100%;
+    border-bottom: 1px dashed #d9d9d9;
+}
+.no_account {
+    position: absolute;
+    top: 500px;
+    left: 176px;
+    font-size: 19px;
+}
+.no_account a {
+    margin-left: 10px;   
+    color: #804b73;
+}
+.remember_password_rec {
+    position: absolute;
+    top: 318px;
+    left: 335px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #333;
+    line-height: 10px;
+    text-align: center;
+    padding-right: 7px;
+    font-weight: 700;
+}
+.icon-danyehuaban {
+    font-size: 18px;
+    color: blue;
+}
+.remember_password_text {
+    position: absolute;
+    top: 312px;
+    left: 360px;
+    font-size: 15px;
+    color: #333;
+}

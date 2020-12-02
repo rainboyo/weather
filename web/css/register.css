@@ -1,0 +1,91 @@
+body {
+    background-color: #f1f0f0;
+}
+.w {
+    position: relative;
+}
+.register_bg_l {
+    float: left;
+    width: 884px;
+    height: 768px;
+    background:  #1c00d5 url("../imgs/register_bg.png") no-repeat top left;
+    background-size: contain;
+}
+.register_bg_r {
+    float: left;
+    width: 482px;
+    height: 768px;
+    background-color: #1c00d5;
+}
+.blueline {
+    position: absolute;
+    top: 67px;
+    left: 126px;
+    border: 3px solid #43a9ff;
+    width: 181px;
+}
+
+.text {
+    position: absolute;
+    top: 106px;
+    left: 124px;
+    font-size: 60px;
+    color: #2e2b39;
+    font-weight: 700;
+}
+
+.username {
+    position: absolute;
+    top: 250px;
+    left: 124px;
+    width: 337px;
+    height: 62px;
+    border-radius: 31px;
+    border: 1px solid #d9d9d9;
+    background-color: #f1f0f0;
+    text-align: center;
+    line-height: 62px;
+}
+.password {
+    position: absolute;
+    top: 350px;
+    left: 124px;
+    width: 337px;
+    height: 62px;
+    border-radius: 31px;
+    border: 1px solid #d9d9d9;
+    background-color: #f1f0f0;
+    text-align: center;
+    line-height: 62px;
+}
+
+.confirm_password {
+    position: absolute;
+    top: 450px;
+    left: 124px;
+    width: 337px;
+    height: 62px;
+    border-radius: 31px;
+    border: 1px solid #d9d9d9;
+    background-color: #f1f0f0;
+    text-align: center;
+    line-height: 62px;
+}
+
+.register_btn {
+    position: absolute;
+    top: 570px;
+    left: 124px;
+    width: 214px;
+    height: 54px;
+    border: 1px solid #007cff;
+    border-radius: 27px;
+    background-color: #43a9ff;
+    color: #ffffff;
+    font-size: 32px;
+    text-align: center;
+    line-height: 54px;
+}
+.register_btn:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,379 @@
+.w-l {
+    float: left;
+    width: 17%;
+    height: 100%;
+}
+.userinfo {
+    width: 100%;
+    height: 20%;
+    background-color: blue;
+    font-size: 30px;
+    text-align: center;
+    line-height: 153px;
+    color: #fff;
+}
+.menu {
+    width: 100%;
+    height: 80%;
+    background-color: #fff;
+}
+.menu ul {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+/* 父元素height等于 768 x 0.8 = 614  */
+.menu li {
+    float: right;
+    width: 98%;
+    height: 12%;
+    margin-bottom: 50px;
+    font-size: 20px;
+    line-height: 73px; /* 614 x 0.12 = 73 */
+    color: #595959;
+    font-weight: 700;
+    border-radius: 37px 0 0 37px;
+}
+.menu li:first-child {
+    margin-top: 20px;
+}
+
+.menu .menu_checked {
+    background-color: #ecf1ff;
+    color: #4977fc;
+}
+.iconfont {
+    margin: 0 15px;
+}
+
+.select {
+    position: relative;
+    width: 1133px;
+    height: 153px;
+    background-color: #4977fc;
+}
+
+.select_from,
+.select_to {
+    position: absolute;
+    width: 455px;
+    height: 37px;
+}
+
+.select_from {
+    top:105px;
+    left: 59px;
+}
+.select_to {
+    top:105px;
+    left: 618px;
+}
+.select_interval,
+.select_middle {
+    position: absolute;
+    top: 0;
+    left: 370px;
+    width: 400px;
+    height: 100px;
+}
+.select_interval .interval_yearSelected,
+.select_interval .interval_monthSelected,
+.select_interval .interval_daySelected,
+.select_middle .middle_yearSelected,
+.select_middle .middle_monthSelected,
+.select_middle .middle_daySelected {
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    font-size: 18px;
+    color:pink;
+    border: 1px solid #2e2b39;
+    border-radius: 15px;
+    background-color: #f3f3f4;
+    text-align: center;
+    cursor: pointer;
+    line-height: 30px;
+}
+.select_interval .interval_yearSelected:hover,
+.select_interval .interval_monthSelected:hover,
+.select_interval .interval_daySelected:hover,
+.select_middle .middle_yearSelected:hover,
+.select_middle .middle_monthSelected:hover,
+.select_middle .middle_daySelected:hover {
+    background-color: #43a9ff;
+}
+
+
+.select_interval .interval_yearSelected,
+.select_middle .middle_yearSelected {
+    top: 41px;
+    left: 0;
+}
+.select_interval .interval_monthSelected,
+.select_middle .middle_monthSelected {
+    top: 41px;
+    left: 160px;
+}
+.select_interval .interval_daySelected,
+.select_middle .middle_daySelected  {
+    top: 41px;
+    left: 321px;
+}
+
+#checked {
+    background-color: #43a9ff !important;
+}
+
+.search {
+
+	position: absolute;
+	top: 108px;
+	left: 1388px;
+	width: 41px;
+	height: 26px;
+	font-size: 18px;
+	border: 1px solid #ccc;
+	padding-left: 5px;
+	color: pink;
+	
+}
+
+.search:hover {
+	background-color: #e8e8e8;
+	color: #333;
+	cursor: pointer;
+	
+}
+
+
+.select_common {
+    position: absolute;
+    top: 0px;
+    width: 123px;
+    height: 33px;
+	cursor:pointer;
+}
+.select_result {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 33px;
+    padding-left: 22px;
+    color: #fff;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    
+}
+.select_common ul {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.select_common li {
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0 0 25px;
+    box-sizing: border-box;
+    font-size: 17px;
+    font-weight: 500;
+    color: #858585;
+}
+.select_common ul {
+    display: none;
+}
+
+
+.select_common li:hover {
+    background-color: #e5e5e5;
+}
+.select_common .iconfont {
+    position: absolute;
+    top: 4px;
+    left: 79px;
+    font-size: 20px;
+}
+.select_year {
+    left: 0;
+
+}
+.select_month {
+    left: 170px;
+
+}
+.select_day {
+    left: 330px;
+}
+
+
+
+/*数据展示部分*/
+
+.data-table {
+    width: 1133px;
+    height: 500px;
+}
+.table-head th {
+    width: 94px;
+    height: 45px;
+    background-color: #e4e9f0;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    line-height: 45px;
+}
+.data-table td {
+    width: 94px;
+    height: 45px;
+    color: #616467;
+    text-align: center;
+    line-height: 45px;
+}
+.data-table tr:nth-child(odd) td {
+    background-color: #f3f3f4;
+}
+
+/**
+ 页码，翻页
+ */
+
+.bottom {
+    position: relative;
+    top: 0;
+    left: 825px;
+    width: 300px;
+    height: 40px;
+}
+.page {
+    position: absolute;
+    top: 0;
+    left: -150px;
+    width: 50px;
+    height: 50px;
+}
+
+
+#di
+{
+    position: absolute;
+    top: 12px;
+    left: -5px;
+}
+#pagenum {
+    position: absolute;
+    top: 10px;
+    left: -19px;
+    margin-left: 38px;
+    width: 38px;
+    height: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+#ye
+{
+    position: absolute;
+    top: 12px;
+    left: 68px;
+}
+.goto {
+    position: absolute;
+    top: 9px;
+    left: 95px;
+    width: 29px;
+    height: 21px;
+    border: 1px solid #d4d4d4;
+    text-align: center;
+    line-height: 21px;
+    cursor: pointer;
+}
+
+.goto:hover {
+    background-color: #d8d9d8;
+    color: #333;
+
+}
+#gong {
+    position: absolute;
+    top: 11px;
+    left: 142px;
+}
+
+.pageCount {
+    position: absolute;
+    top: 11px;
+    left: 159px;
+    width: 45px;
+    height: 18px;
+    border: 1px solid #c9c9c9;
+    text-align: center;
+    line-height: 18px;
+}
+
+#ye2 {
+    position: absolute;
+    top: 11px;
+    left: 210px;
+}
+
+
+
+/*翻页*/
+.prev {
+    position: absolute;
+    top: 2px;
+    left: 95px;
+    width: 64px;
+    height: 33px;
+    font-size: 20px;
+    color: #808b9e;
+    border: 1px solid #cfdce3;
+    padding-left: 34px;
+    cursor: pointer;
+}
+.prev:hover {
+    background-color: #f9e0c1;
+    color: #333;
+}
+.next {
+    position: absolute;
+    top: 2px;
+    left: 197px;
+    width: 87px;
+    height: 33px;
+    font-size: 20px;
+    color: #808b9e;
+    border: 1px solid #cfdce3;
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+.next:hover {
+    background-color: #f9e0c1;
+    color: #333;
+}
+
+.next .iconfont {
+    position: absolute;
+    top: 6px;
+    left: 62px;
+}
+.prev .iconfont {
+    position: absolute;
+    top: 5px;
+    left: -8px;
+}
+
+
+.w-r {
+    float: left;
+    width: 83%;
+    height: 100%;
+}
+
+
+
+/*js动态添加删除的样式*/
+.mouseover {
+ background-color: #eff1ee;
+
+}

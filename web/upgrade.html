@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/upgrade.css">
+    <script src="js/ajax.js"></script>
+    <script src="js/upgrade.js"></script>
+    <script src="js/upgrade_dataGet.js"></script>
+</head>
+<body>
+    <div class="w">
+        <div class="w-l">
+             <div class="menu">
+                <div class="userinfo">北京</div>
+                <div id="initial" class="make_interval menu_checked"><span class="iconfont icon-weibiaoti--"></span><span>区间化</span></div>
+                <div id="middle" class="make_middle "><span class="iconfont icon-weibiaoti--"></span><span>中值</span></div>
+                <div id="normalized" class="make_normal "><span class="iconfont icon-weibiaoti--"></span><span>归一化</span></div>
+                <div id="dataChecked" class="dataChecked "><span class="iconfont icon-weibiaoti--"></span><span>选定数据集</span></div>
+            </div>
+        </div>
+        <div class="w-r">
+            <div class="select">
+                <!--select_from-->
+                <div class="select_from">
+                    <div class="select_year select_common">
+                        <div class="select_result">年</div>
+                        <ul style="max-height: 300px;">
+                            <li>2010</li>
+                            <li>2011</li>
+                            <li>2012</li>
+                            <li>2013</li>
+                            <li>2015</li>
+                            <li>2016</li>
+                            <li>2017</li>
+                            <li>2018</li>
+                        </ul>
+                        <span class="iconfont icon-xiala"></span>
+                    </div>
+                    <div class="select_month select_common">
+                        <div class="select_result">月</div>
+                        <ul style="max-height: 300px;">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                        </ul>
+                        <span class="iconfont icon-xiala"></span>
+                    </div>
+                    <div class="select_day select_common">
+                        <div class="select_result">日</div>
+                        <ul style="max-height: 300px;">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                        </ul>
+                        <span class="iconfont icon-xiala"></span>
+                    </div>
+                </div>
+                <!--select_to-->
+                <div class="select_to">
+                    <div class="select_year select_common">
+                        <div class="select_result">年</div>
+                        <ul style="max-height: 300px;">
+                            <li>2010</li>
+                            <li>2011</li>
+                            <li>2012</li>
+                            <li>2013</li>
+                            <li>2015</li>
+                            <li>2016</li>
+                            <li>2017</li>
+                            <li>2018</li>
+                        </ul>
+                        <span class="iconfont icon-xiala"></span>
+                    </div>
+                    <div class="select_month select_common">
+                        <div class="select_result">月</div>
+                        <ul style="max-height: 300px;">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                        </ul>
+                        <span class="iconfont icon-xiala"></span>
+                    </div>
+                    <div class="select_day select_common">
+                        <div class="select_result">日</div>
+                        <ul style="max-height: 300px;">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                        </ul>
+                        <span class="iconfont icon-xiala"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search">
+                搜索
+            </div>
+            <div id="checked" style="display:none;">原始数据</div>
+            <table class="data-table" data-ok="no">
+                <tr class="table-head">
+                    <th class="time">时间</th>
+                    <th>气温</th>
+                    <th>气压</th>
+                    <th>湿度</th>
+                    <th>露点温度</th>
+                    <th>能见度</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+
+            </table>
+            <div class="bottom">
+                <div class="page">
+                    <span id="di">第</span>
+                    <input id="pagenum" type="text" value="1" name="pagenum">
+                    <span id="ye">页</span>
+                    <div class="goto">Go</div>
+                    <span id="gong">共</span>
+                    <div class="pageCount">?</div>
+                    <span id="ye2">页</span>
+                </div>
+                <div class="next">next <span class="iconfont icon-fanye"></span></div>
+                <div class="prev"><span class="iconfont icon-fanye1"></span>prev</div>
+            </div>
+            <!-- 选定的日区间-->
+            <div class="dayChecked">
+                <div class="dayTableTag">日区间数据</div>
+                <table id="dayDataTable" class="checked-data-table" >
+                    <tr class="table-head">
+                        <th class="time">时间</th>
+                        <th>气温</th>
+                        <th>气压</th>
+                        <th>湿度</th>
+                        <th>露点温度</th>
+                        <th>能见度</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                </table>
+                <div class="bottom">
+                    <div class="page">
+                        <span class="di">第</span>
+                        <input class="pagenum" type="text" value="1" name="pagenum">
+                        <span class="ye">页</span>
+                        <div class="goto">Go</div>
+                        <span class="gong">共</span>
+                        <div class="pageCount">?</div>
+                        <span class="ye2">页</span>
+                    </div>
+                    <div class="next">next<span class="iconfont icon-fanye"></span></div>
+                    <div class="prev"><span class="iconfont icon-fanye1"></span>prev</div>
+                </div>
+            </div>
+            <!-- 选定的月区间-->
+            <div class="monthChecked">
+                <div class="monthTableTag">月区间数据</div>
+                <table id="monthDataTable" class="checked-data-table" >
+                    <tr class="table-head">
+                        <th class="time">时间</th>
+                        <th>气温</th>
+                        <th>气压</th>
+                        <th>湿度</th>
+                        <th>露点温度</th>
+                        <th>能见度</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                </table>
+                <div class="bottom">
+                    <div class="page">
+                        <span class="di">第</span>
+                        <input class="pagenum" type="text" value="1" name="pagenum">
+                        <span class="ye">页</span>
+                        <div class="goto">Go</div>
+                        <span class="gong">共</span>
+                        <div class="pageCount">?</div>
+                        <span class="ye2">页</span>
+                    </div>
+                    <div class="next">next <span class="iconfont icon-fanye"></span></div>
+                    <div class="prev"><span class="iconfont icon-fanye1"></span>prev</div>
+                </div>
+            </div>
+            <!-- 选定的年区间-->
+            <div class="yearChecked">
+                <div class="yearTableTag">年区间数据</div>
+                <table id="yearDataTable" class="checked-data-table" >
+                    <tr class="table-head">
+                        <th class="time">时间</th>
+                        <th>气温</th>
+                        <th>气压</th>
+                        <th>湿度</th>
+                        <th>露点温度</th>
+                        <th>能见度</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                </table>
+                <div class="bottom">
+                    <div class="page">
+                        <span class="di">第</span>
+                        <input class="pagenum" type="text" value="1" name="pagenum">
+                        <span class="ye">页</span>
+                        <div class="goto">Go</div>
+                        <span class="gong">共</span>
+                        <div class="pageCount">?</div>
+                        <span class="ye2">页</span>
+                    </div>
+                    <div class="next">next <span class="iconfont icon-fanye"></span></div>
+                    <div class="prev"><span class="iconfont icon-fanye1"></span>prev</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
